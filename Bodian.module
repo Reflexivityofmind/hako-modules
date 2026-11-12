@@ -19,3 +19,6 @@
 
 ^http:\/\/bd-api\.kuwo\.cn\/api\/service\/music\/recommendList\?uid _ reject
 
+[MITM]
+hostname = %APPEND% bodiancdn.kuwo.cn
+
