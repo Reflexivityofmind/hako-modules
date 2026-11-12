@@ -1,0 +1,13 @@
+#!name=迅雷
+#!desc=迅雷会员解锁
+#!category=Egern 30 Unlock Check-in
+#!author=Marol62926
+#!icon=https://raw.githubusercontent.com/deezertidal/private/main/icons/thunder.png
+#!homepage=https://yfamily.ml
+
+[Script]
+xunlei = type=http-response, pattern=https://xluser-ssl.xunlei.com/xluser.core.login/v3/getuserinfo, script-path=https://raw.githubusercontent.com/Marol62926/MarScrpt/main/xunlei.js, requires-body=true, max-size=0
+
+[MITM]
+hostname = %APPEND% xluser-ssl.xunlei.com
+

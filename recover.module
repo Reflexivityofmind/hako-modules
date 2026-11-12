@@ -1,0 +1,8 @@
+#!url=https://raw.githubusercontent.com/Reflexivityofmind/hako-modules/main/recover.module
+#!name=keep yfamily
+#!desc=保持yfamily.ml的远程资源有效性
+
+[URL Rewrite]
+^https:\/\/yfamily\.ml/(.*)$ https://whatshub.top/$1 302
+[MITM]
+hostname = %APPEND% yfamily.*

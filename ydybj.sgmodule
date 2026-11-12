@@ -1,0 +1,10 @@
+#!name=有道云笔记
+#!desc=有道云笔记VIP
+#!category=Egern 30 Unlock Check-in
+#!author=Alex0510
+#!icon=https://raw.githubusercontent.com/deezertidal/private/main/icons/ydybj.png
+#!homepage=https://yfamily.ml
+
+[Script]
+ydybj = type=http-response, pattern=https://note.youdao.com/yws/(mapi/payment|api/self), script-path=https://raw.githubusercontent.com/Alex0510/Eric/master/surge/Script/ydybj.js, requires-body=true
+

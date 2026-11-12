@@ -1,0 +1,13 @@
+#!name=Craft
+#!desc=Craft解锁会员
+#!category=Egern 30 Unlock Check-in
+#!author=89996462
+#!icon=https://raw.githubusercontent.com/deezertidal/private/main/icons/craft.png
+#!homepage=https://yfamily.ml
+
+[Script]
+Craft = type=http-response, pattern=^https:\/\/api\.craft\.do\/auth\/v2\/profile, script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/Craft.js, requires-body=true
+
+[MITM]
+hostname = %APPEND% api.craft.do
+

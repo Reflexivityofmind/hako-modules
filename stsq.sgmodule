@@ -1,0 +1,12 @@
+#!name=搜图神器
+#!desc=搜图神器解锁会员
+#!category=Egern 30 Unlock Check-in
+#!author=lutqhysky
+#!icon=https://raw.githubusercontent.com/deezertidal/private/main/icons/stsq.png
+
+[Script]
+SearchArtifact = type=http-response, pattern=http:\/\/wallpaper\.soutushenqi\.com\/api\/v1\/account\/token, script-path=https://raw.githubusercontent.com/Alex0510/Eric/master/surge/Script/SearchArtifact.js, requires-body=true
+
+[MITM]
+hostname = %APPEND% wallpaper.soutushenqi.com
+
