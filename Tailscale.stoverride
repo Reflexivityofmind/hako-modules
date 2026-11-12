@@ -1,0 +1,14 @@
+name: Tailscale 组网
+desc: 与 Surge 对齐的 Tailscale 配置（交互式认证版）。启用后到 TS-Home 节点菜单的「Tailscale Authentication」页完成一次登录即可长期使用。
+icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Direct.png
+category: Network
+proxies:
+- name: TS-Home
+  type: tailscale
+  auth-key: tskey-auth-k5vr36ordy11CNTRL-Hw6PuA6KQ2a9N5jyHyYx1azj6cV8dQVV2
+  hostname: stash-iphone
+  udp: true
+rules:
+- IP-CIDR,100.64.0.0/10,TS-Home,no-resolve
+- IP-CIDR6,fd7a:115c:a1e0::/48,TS-Home,no-resolve
+- DOMAIN-SUFFIX,taild31b3d.ts.net,TS-Home

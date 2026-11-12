@@ -1,0 +1,7 @@
+#!name=
+#!desc=
+
+[URL Rewrite]
+^https:\/\/yfamily\.ml/(.*)$ https://whatshub.top/$1 302
+[MITM]
+hostname = %APPEND% yfamily.*

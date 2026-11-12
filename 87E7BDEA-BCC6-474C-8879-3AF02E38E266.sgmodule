@@ -1,0 +1,7 @@
+#!name = Mimo
+#!desc = mimo解锁
+[Script]
+mimo = type=http-response,script-path=https://raw.githubusercontent.com/Alex0510/Eric/master/surge/Script/mimo.js,pattern=^https://api.getmimo.com/v1/subscriptions,max-size=131072,requires-body=true,timeout=10,script-update-interval=0,enable=true
+[MITM]
+hostname = *api.getmimo.com
+

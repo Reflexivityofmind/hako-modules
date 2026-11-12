@@ -1,0 +1,39 @@
+#SUBSCRIBED https://raw.githubusercontent.com/DualSubs/DualSubs/main/stoverride/DualSubs.YouTube.stoverride
+name: 🍿️ DualSubs for YouTube
+desc: (V0.4.x) YouTube字幕增强及双语模块
+
+http:
+  mitm:
+    - "www.youtube.com"
+    - "m.youtube.com"
+    - "youtubei.googleapis.com"
+  script:
+    - match: ^https?:\/\/(www|m)\.youtube\.com\/youtubei\/v1\/player(\?.*)$
+      name: DualSubs.YouTube.Player
+      type: response
+      require-body: true
+      timeout: 10
+      argument:
+    - match: ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext(\?.*)$
+      name: DualSubs.YouTube.TimedText.request
+      type: request
+      require-body: false
+      timeout: 10
+      argument:
+    - match: ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext(\?.*)$
+      name: DualSubs.YouTube.TimedText.response
+      type: response
+      require-body: true
+      timeout: 10
+      argument:
+
+script-providers:
+  DualSubs.YouTube.Player:
+    url: https://raw.githubusercontent.com/DualSubs/DualSubs/main/js/DualSubs.YouTube.Player.js
+    interval: 86400
+  DualSubs.YouTube.TimedText.request:
+    url: https://raw.githubusercontent.com/DualSubs/DualSubs/main/js/DualSubs.YouTube.TimedText.request.js
+    interval: 86400
+  DualSubs.YouTube.TimedText.response:
+    url: https://raw.githubusercontent.com/DualSubs/DualSubs/main/js/DualSubs.YouTube.TimedText.response.js
+    interval: 86400

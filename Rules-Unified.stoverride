@@ -1,0 +1,297 @@
+name: 统一分流规则
+desc: 与 Surge / Shadowrocket / Egern 同名同逻辑的规则集（blackmatrix7 Clash 格式，rule-providers 引用）。规则前插，优先级高于订阅自带规则。仅做规则分流：不定义策略组、不引用具体节点，代理流量统一走订阅的「🚀 节点选择」。
+icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png"
+category: "Rules"
+
+rule-providers:
+  advertising:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Advertising/Advertising.yaml
+    interval: 86400
+  openai:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml
+    interval: 86400
+  claude:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.yaml
+    interval: 86400
+  gemini:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Gemini/Gemini.yaml
+    interval: 86400
+  netflix:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.yaml
+    interval: 86400
+  disney:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Disney/Disney.yaml
+    interval: 86400
+  hbo:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/HBO/HBO.yaml
+    interval: 86400
+  bahamut:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Bahamut/Bahamut.yaml
+    interval: 86400
+  twitch:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitch/Twitch.yaml
+    interval: 86400
+  tiktok:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok.yaml
+    interval: 86400
+  globalmedia:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia.yaml
+    interval: 86400
+  spotify:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify.yaml
+    interval: 86400
+  bilibili:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BiliBili/BiliBili.yaml
+    interval: 86400
+  youtube:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml
+    interval: 86400
+  youtubemusic:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTubeMusic/YouTubeMusic.yaml
+    interval: 86400
+  googlevoice:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GoogleVoice/GoogleVoice.yaml
+    interval: 86400
+  google:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml
+    interval: 86400
+  telegram:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml
+    interval: 86400
+  twitter:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.yaml
+    interval: 86400
+  facebook:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook.yaml
+    interval: 86400
+  whatsapp:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Whatsapp/Whatsapp.yaml
+    interval: 86400
+  discord:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Discord/Discord.yaml
+    interval: 86400
+  github:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml
+    interval: 86400
+  microsoft:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml
+    interval: 86400
+  applemusic:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AppleMusic/AppleMusic.yaml
+    interval: 86400
+  icloud:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/iCloud/iCloud.yaml
+    interval: 86400
+  appleproxy:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AppleProxy/AppleProxy.yaml
+    interval: 86400
+  apple:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.yaml
+    interval: 86400
+  steamcn:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/SteamCN/SteamCN.yaml
+    interval: 86400
+  steam:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Steam/Steam.yaml
+    interval: 86400
+  blizzard:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Blizzard/Blizzard.yaml
+    interval: 86400
+  epic:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Epic/Epic.yaml
+    interval: 86400
+  sony:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Sony/Sony.yaml
+    interval: 86400
+  nintendo:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Nintendo/Nintendo.yaml
+    interval: 86400
+  game:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/Game.yaml
+    interval: 86400
+  paypal:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PayPal/PayPal.yaml
+    interval: 86400
+  amazon:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Amazon/Amazon.yaml
+    interval: 86400
+  chinamax:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax.yaml
+    interval: 86400
+
+rules:
+  # VPS 自身流量直连（防代理回环）
+  - IP-CIDR,207.148.88.18/32,DIRECT,no-resolve
+  - IP-CIDR6,2001:19f0:7001:397c:5400:5ff:fee3:8fd3/128,DIRECT,no-resolve
+  - DOMAIN-SUFFIX,takecareoflanguage.org,DIRECT
+  - DOMAIN-SUFFIX,sjuku.top,DIRECT
+  - DOMAIN-SUFFIX,cupl.edu.cn,DIRECT
+  # Siri / Apple Intelligence
+  - DOMAIN-SUFFIX,siri.apple.com,🚀 节点选择
+  - DOMAIN,api-siri-prod.apple.com,🚀 节点选择
+  - DOMAIN,guzzoni.apple.com,🚀 节点选择
+  - DOMAIN-SUFFIX,smoot.apple.com,🚀 节点选择
+  - DOMAIN,apple-relay.cloudflare.com,🚀 节点选择
+  - DOMAIN,apple-relay.fastly-edge.com,🚀 节点选择
+  - DOMAIN,cp4.cloudflare.com,🚀 节点选择
+  - DOMAIN,apple-relay.apple.com,🚀 节点选择
+  # Apple 推送与 iCloud 隐私代理
+  - DOMAIN-SUFFIX,push.apple.com,🚀 节点选择
+  - DOMAIN,mask-api.icloud.com,🚀 节点选择
+  - DOMAIN,mask-h2.icloud.com,🚀 节点选择
+  - DOMAIN,mask.icloud.com,🚀 节点选择
+  - DOMAIN,cdn.bsky.app,🚀 节点选择
+  - DOMAIN-SUFFIX,manhuagui.com,🚀 节点选择
+  - RULE-SET,advertising,REJECT
+  - RULE-SET,openai,🚀 节点选择
+  - RULE-SET,claude,🚀 节点选择
+  - RULE-SET,gemini,🚀 节点选择
+  - RULE-SET,netflix,🚀 节点选择
+  - RULE-SET,disney,🚀 节点选择
+  - RULE-SET,hbo,🚀 节点选择
+  - RULE-SET,bahamut,🚀 节点选择
+  - RULE-SET,twitch,🚀 节点选择
+  - RULE-SET,tiktok,🚀 节点选择
+  - RULE-SET,globalmedia,🚀 节点选择
+  - RULE-SET,spotify,🚀 节点选择
+  - RULE-SET,bilibili,DIRECT
+  - RULE-SET,youtube,🚀 节点选择
+  - RULE-SET,youtubemusic,🚀 节点选择
+  - RULE-SET,googlevoice,🚀 节点选择
+  - RULE-SET,google,🚀 节点选择
+  - RULE-SET,telegram,🚀 节点选择
+  - RULE-SET,twitter,🚀 节点选择
+  - RULE-SET,facebook,🚀 节点选择
+  - RULE-SET,whatsapp,🚀 节点选择
+  - RULE-SET,discord,🚀 节点选择
+  - RULE-SET,github,🚀 节点选择
+  - RULE-SET,microsoft,🚀 节点选择
+  - RULE-SET,applemusic,🚀 节点选择
+  - RULE-SET,icloud,🚀 节点选择
+  - RULE-SET,appleproxy,🚀 节点选择
+  - RULE-SET,apple,🚀 节点选择
+  - RULE-SET,steamcn,DIRECT
+  - RULE-SET,steam,🚀 节点选择
+  - RULE-SET,blizzard,🚀 节点选择
+  - RULE-SET,epic,🚀 节点选择
+  - RULE-SET,sony,🚀 节点选择
+  - RULE-SET,nintendo,🚀 节点选择
+  - RULE-SET,game,🚀 节点选择
+  - RULE-SET,paypal,DIRECT
+  - RULE-SET,amazon,DIRECT
+  - RULE-SET,chinamax,DIRECT
+  - GEOIP,CN,DIRECT
