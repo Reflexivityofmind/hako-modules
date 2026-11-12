@@ -1,0 +1,13 @@
+#!name=西窗烛
+#!desc=西窗烛会员解锁
+#!category=Egern 30 Unlock Check-in
+#!author=ddgksf2013
+#!icon=https://raw.githubusercontent.com/deezertidal/private/main/icons/xcz.png
+#!homepage=https://yfamily.ml
+
+[Script]
+xcz = type=http-response, pattern=https://lchttpapi.xczim.com/*, script-path=https://raw.githubusercontent.com/deezertidal/private/master/js-backup/Crack/xcz.js, requires-body=true
+
+[MITM]
+hostname = %APPEND% lchttpapi.xczim.com
+

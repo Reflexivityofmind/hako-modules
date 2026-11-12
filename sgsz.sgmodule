@@ -1,0 +1,13 @@
+#!name=时光手账
+#!desc=时光手账解锁
+#!category=Egern 30 Unlock Check-in
+#!author=Marol62926
+#!icon=https://raw.githubusercontent.com/deezertidal/private/main/icons/sgsz.png
+#!homepage=https://yfamily.ml
+
+[Script]
+timebook = type=http-response, pattern=https://api.shouzhang.com/memcenterlk/member, script-path=https://raw.githubusercontent.com/Marol62926/MarScrpt/main/timebook.js, requires-body=true, max-size=0
+
+[MITM]
+hostname = %APPEND% api.shouzhang.com
+

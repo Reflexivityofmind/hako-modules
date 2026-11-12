@@ -1,0 +1,13 @@
+#!name=石墨文档
+#!desc=石墨文档解锁
+#!category=Egern 30 Unlock Check-in
+#!author=litieyin
+#!icon=https://raw.githubusercontent.com/deezertidal/private/main/icons/smwd.png
+#!homepage=https://yfamily.ml
+
+[Script]
+shimo = type=http-response, pattern=^https:\//shimo.im\/lizard-api\/users\/me, script-path=https://raw.githubusercontent.com/litieyin/AD_VIP/main/Script/shimo.js, requires-body=true
+
+[MITM]
+hostname = %APPEND% shimo.im
+

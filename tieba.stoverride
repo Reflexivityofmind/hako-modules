@@ -1,0 +1,43 @@
+name: |-
+  贴吧去广告(>=iOS15)
+desc: |-
+  20260106;开屏广告;推荐和吧内帖子列表的直播及广告;详情页直播/关联商品/广告;看图模式广告;首页和帖子详情页右下角悬浮广告;部分吧内的置顶/最新中间的广告/head图片广告/head直播
+icon: |-
+  https://github.com/Toperlock/Quantumult/raw/main/icon/Doraemon/Doraemon-1089.png
+openUrl: |-
+  https://github.com/app2smile/rules
+
+rules:
+  - DOMAIN,180.76.76.200,REJECT
+# no-resolve需在最后
+  - IP-CIDR,180.76.76.200/32,REJECT,no-resolve
+
+http:
+
+  mitm:
+    - "tiebac.baidu.com"
+
+  script:
+    - match: ^https?:\/\/(tiebac|c\.tieba)\.baidu\.com\/(c\/(s\/sync|f\/(ad\/getSplashAd|frs\/(page|threadlist|generalTabList)|pb\/(pic)?page|excellent\/personalized))$|tiebaads\/commonbatch\?)
+      name: "贴吧json_12"
+      type: response
+      require-body: true
+      timeout: 10
+
+    - match: ^https?:\/\/(tiebac|c\.tieba)\.baidu\.com\/c\/(b\/ad\/adBid|f\/(frs\/(page|threadlist|generalTabList)|ad\/getFeedAd|pb\/page|excellent\/personalized))\?cmd
+      name: "贴吧proto_13"
+      type: response
+      require-body: true
+      binary-mode: true
+      timeout: 10
+      argument: |-
+        ["0"]
+
+script-providers:
+  "贴吧json_12":
+    url: https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-json.js
+    interval: 86400
+  "贴吧proto_13":
+    url: https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js
+    interval: 86400
+

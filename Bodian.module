@@ -1,0 +1,24 @@
+#!url=https://raw.githubusercontent.com/Reflexivityofmind/hako-modules/main/Bodian.module
+#!name=波点音乐
+
+#!desc=波点音乐去广告
+
+#!homepage=https://yfamilys.com
+
+#!author=zqzess
+
+#!icon=https://raw.githubusercontent.com/deezertidal/private/main/icons/bodian2.png
+
+[URL Rewrite]
+
+^http:\/\/bd-api\.kuwo\.cn\/api\/service\/resource\/musicResource\/.+ _ reject
+
+^https:\/\/bodiancdn\.kuwo\.cn\/.+\.mp4 _ reject
+
+^http:\/\/bd-api\.kuwo\.cn\/api\/service\/resource\/view\?uid _ reject
+
+^http:\/\/bd-api\.kuwo\.cn\/api\/service\/music\/recommendList\?uid _ reject
+
+[MITM]
+hostname = %APPEND% bodiancdn.kuwo.cn
+

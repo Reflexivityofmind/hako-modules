@@ -1,0 +1,20 @@
+#SUBSCRIBED https://raw.githubusercontent.com/Reflexivityofmind/hako-modules/main/tutu.stoverride
+#!desc=图图记账解锁永久高级版
+#!homepage=https://yfamilys.com
+#!author=yqc007
+#!icon=https://raw.githubusercontent.com/deezertidal/private/main/icons/tutu.png
+name: tutujizhang
+desc: 图图记账解锁永久高级版
+http:
+  mitm:
+    - "api.revenuecat.com"
+  script:
+    - match: ^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCAnonymousID%3A\w{32})$
+      name: tutujizhang1
+      type: response
+      require-body: true
+      timeout: 10
+script-providers:
+  tutujizhang1:
+    url: https://raw.githubusercontent.com/yqc007/QuantumultX/master/ToToWalletFProCrack.js
+    interval: 86400

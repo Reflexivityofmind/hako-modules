@@ -1,0 +1,13 @@
+#!name=Cubox
+#!desc=Cubox解锁
+#!category=Egern 30 Unlock Check-in
+#!author=89996462
+#!icon=https://raw.githubusercontent.com/deezertidal/private/main/icons/cubox.png
+#!homepage=https://yfamily.ml
+
+[Script]
+cubox = type=http-response, pattern=^https:\/\/cubox\.pro\/c\/api\/userInfo, script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/cubox.js, requires-body=true, max-size=0
+
+[MITM]
+hostname = %APPEND% cubox.pro
+

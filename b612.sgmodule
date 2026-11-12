@@ -1,0 +1,13 @@
+#!name=B612咔叽
+#!desc=B612咔叽会员解锁
+#!category=Egern 30 Unlock Check-in
+#!author=ddgksf2013
+#!icon=https://raw.githubusercontent.com/deezertidal/private/main/icons/b612.png
+#!homepage=https://yfamily.ml
+
+[Script]
+612 = type=http-response, pattern=https://user-kaji-api.b612kaji.com/v1/purchase/subscription/subscriber/status, script-path=https://github.com/deezertidal/private/raw/master/js-backup/Crack/612.js, requires-body=true
+
+[MITM]
+hostname = %APPEND% user-kaji-api.b612kaji.com
+

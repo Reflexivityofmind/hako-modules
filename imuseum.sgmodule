@@ -1,0 +1,13 @@
+#!name=IMuseum
+#!desc=IMuseum会员解锁
+#!category=Egern 30 Unlock Check-in
+#!author=Marol62926
+#!icon=https://raw.githubusercontent.com/deezertidal/private/main/icons/imuseum.png
+#!homepage=https://yfamily.ml
+
+[Script]
+imuseum = type=http-response, pattern=https://icity-imsm.2q10.com/api/v1/users/mark_paid, script-path=https://raw.githubusercontent.com/Marol62926/MarScrpt/main/imuseum.js, requires-body=true, max-size=0
+
+[MITM]
+hostname = %APPEND% icity-imsm.2q10.com
+
